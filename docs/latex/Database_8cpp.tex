@@ -1,0 +1,30 @@
+\hypertarget{Database_8cpp}{}\doxysection{db/\+Database.cpp File Reference}
+\label{Database_8cpp}\index{db/Database.cpp@{db/Database.cpp}}
+
+
+Implementation of the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} class for managing SQLite database operations.  
+
+
+{\ttfamily \#include \char`\"{}Database.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Database.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{Database_8cpp__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} class for managing SQLite database operations. 
+
+This file defines the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} class responsible for handling database connections and setting up tables for users, tasks, and rules. It manages the database connection and ensures that the required tables exist.
+
+OOP Principles\+:
+\begin{DoxyItemize}
+\item Encapsulation\+: The database connection and table creation functionality are encapsulated in the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} class. The class provides public methods to interact with the database.
+\item Constructor and Destructor\+: The constructor manages opening the database, and the destructor ensures proper cleanup by closing the connection. 
+\end{DoxyItemize}

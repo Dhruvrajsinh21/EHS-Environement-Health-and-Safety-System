@@ -1,0 +1,24 @@
+\hypertarget{index_intro_sec}{}\doxysection{Introduction}\label{index_intro_sec}
+This is a C++ terminal-\/based EHS management system for handling workers and managers. It supports user registration, login, task assignment, violation reporting, safety rules, feedback collection, using SQLite.\hypertarget{index_features_sec}{}\doxysection{Features}\label{index_features_sec}
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classManager}{Manager}} and \mbox{\hyperlink{classWorker}{Worker}} roles
+\item Task assignment and reporting
+\item Violation reporting
+\item Rule addition, viewing, and feedback
+\item Multithreading support
+\end{DoxyItemize}\hypertarget{index_structure_sec}{}\doxysection{Folder Structure}\label{index_structure_sec}
+
+\begin{DoxyItemize}
+\item {\ttfamily db/}\+: Database connection and setup
+\item {\ttfamily manager/}\+: \mbox{\hyperlink{classManager}{Manager}} class and functions
+\item {\ttfamily worker/}\+: \mbox{\hyperlink{classWorker}{Worker}} class and functions
+\item {\ttfamily user/}\+: Base \mbox{\hyperlink{classUser}{User}} class
+\end{DoxyItemize}\hypertarget{index_howto_sec}{}\doxysection{How to Compile}\label{index_howto_sec}
+Compile using\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{g++ code.cpp db/Database.cpp manager/manager.cpp user/user.cpp worker/worker.cpp -\/lsqlite3 -\/lssl -\/lcrypto}
+
+\end{DoxyCode}
+\hypertarget{index_usage_sec}{}\doxysection{Usage}\label{index_usage_sec}
+Run the app and follow the terminal prompts to register/login and perform role-\/based actions. 

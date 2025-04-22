@@ -1,0 +1,286 @@
+\hypertarget{classUser}{}\doxysection{User Class Reference}
+\label{classUser}\index{User@{User}}
+
+
+{\ttfamily \#include $<$user.\+h$>$}
+
+
+
+Inheritance diagram for User\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classUser__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUser_a8064e556ac5b7920d205d66e3f65ccbc}{User}} (const std\+::string \&\mbox{\hyperlink{classUser_ac066a219bd8d28680aefb90ecc8fc635}{role}})
+\begin{DoxyCompactList}\small\item\em Parameterized constructor that sets the user role (OOP\+: Encapsulation). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUser_a4a0137053e591fbb79d9057dd7d2283d}{User}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classUser}{User}} class (used in OOP). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}{$\sim$\+User}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classUser}{User}} class (OOP\+: Clean-\/up if needed). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classUser_a83d02e30e9c5ffbeefee9e65fbd3ba1a}{hash\+Password}} (const string \&\mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Hash a password using SHA-\/256 (OOP\+: Abstraction, hides hashing logic). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUser_a33636513021d1e3a781f9197991dad93}{register\+User}} (sqlite3 $\ast$db, const std\+::string \&\mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}}, const std\+::string \&\mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Register a new user with hashed password (OOP\+: Behavior using class method). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUser_a440dbff336f876e198617df9544ebdd7}{login\+User}} (sqlite3 $\ast$db, const std\+::string \&\mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}}, const std\+::string \&\mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Log in user by checking hashed password and role. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classUser_a3dc1787aa9af062e7bb771079775013f}{get\+User\+Role}} (sqlite3 $\ast$db, const std\+::string \&\mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}}, const std\+::string \&\mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Get the role of a user after checking login credentials. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classUser_ad27360704a4f942d27a8e7d3719a2a1e}{user\+Exists}} (sqlite3 $\ast$db, const std\+::string \&\mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}}, const std\+::string \&\mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Check if user already exists (by username + password). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_af59fbc784a799ecb3ad97a1deee537ed}{view\+Task\+Details}} (sqlite3 $\ast$db, int user\+Id, bool is\+Manager=false)
+\begin{DoxyCompactList}\small\item\em View task details. \mbox{\hyperlink{classManager}{Manager}} sees all, worker sees their own tasks. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUser_ad5af31083366d525e0691c84c6ca47a9}{get\+User\+Id}} (sqlite3 $\ast$db, const std\+::string \&\mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}}, const std\+::string \&\mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}})
+\begin{DoxyCompactList}\small\item\em Get the user ID based on username and password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_ab83bb9e71f633271233b01a2ea442c6e}{view\+Rules}} (sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em Display all safety rules from the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUser_a597840ebb5fb7432439270ec32ada1ca}{View\+Rule\+Feedback}} (sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em Display feedback (if any) for each rule in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classUser_aacbb807e514280f69e00bec7d71f3aee}{username}}
+\item 
+std\+::string \mbox{\hyperlink{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}}
+\item 
+std\+::string \mbox{\hyperlink{classUser_ac066a219bd8d28680aefb90ecc8fc635}{role}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUser_a8064e556ac5b7920d205d66e3f65ccbc}\label{classUser_a8064e556ac5b7920d205d66e3f65ccbc}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{role }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor that sets the user role (OOP\+: Encapsulation). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em role} & The role to assign (e.\+g., \char`\"{}worker\char`\"{}, \char`\"{}manager\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUser_a4a0137053e591fbb79d9057dd7d2283d}\label{classUser_a4a0137053e591fbb79d9057dd7d2283d}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \mbox{\hyperlink{classUser}{User}} class (used in OOP). 
+
+\mbox{\Hypertarget{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}\label{classUser_ac00b72ad64eb4149f7b21b9f5468c2b2}} 
+\index{User@{User}!````~User@{$\sim$User}}
+\index{````~User@{$\sim$User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{$\sim$User()}{~User()}}
+{\footnotesize\ttfamily User\+::$\sim$\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \mbox{\hyperlink{classUser}{User}} class (OOP\+: Clean-\/up if needed). 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUser_ad5af31083366d525e0691c84c6ca47a9}\label{classUser_ad5af31083366d525e0691c84c6ca47a9}} 
+\index{User@{User}!getUserId@{getUserId}}
+\index{getUserId@{getUserId}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserId()}{getUserId()}}
+{\footnotesize\ttfamily int User\+::get\+User\+Id (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Get the user ID based on username and password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & SQLite DB. \\
+\hline
+{\em username} & \mbox{\hyperlink{classUser}{User}}\textquotesingle{}s name. \\
+\hline
+{\em password} & \mbox{\hyperlink{classUser}{User}}\textquotesingle{}s password. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classUser}{User}} ID or -\/1 if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a3dc1787aa9af062e7bb771079775013f}\label{classUser_a3dc1787aa9af062e7bb771079775013f}} 
+\index{User@{User}!getUserRole@{getUserRole}}
+\index{getUserRole@{getUserRole}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserRole()}{getUserRole()}}
+{\footnotesize\ttfamily std\+::string User\+::get\+User\+Role (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Get the role of a user after checking login credentials. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & SQLite database pointer. \\
+\hline
+{\em username} & User’s name. \\
+\hline
+{\em password} & User’s password. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Role if found; otherwise \char`\"{}none\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a83d02e30e9c5ffbeefee9e65fbd3ba1a}\label{classUser_a83d02e30e9c5ffbeefee9e65fbd3ba1a}} 
+\index{User@{User}!hashPassword@{hashPassword}}
+\index{hashPassword@{hashPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{hashPassword()}{hashPassword()}}
+{\footnotesize\ttfamily string User\+::hash\+Password (\begin{DoxyParamCaption}\item[{const string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Hash a password using SHA-\/256 (OOP\+: Abstraction, hides hashing logic). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & Plain text password. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hashed password in hex string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a440dbff336f876e198617df9544ebdd7}\label{classUser_a440dbff336f876e198617df9544ebdd7}} 
+\index{User@{User}!loginUser@{loginUser}}
+\index{loginUser@{loginUser}!User@{User}}
+\doxysubsubsection{\texorpdfstring{loginUser()}{loginUser()}}
+{\footnotesize\ttfamily bool User\+::login\+User (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Log in user by checking hashed password and role. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & SQLite database pointer. \\
+\hline
+{\em username} & Username entered. \\
+\hline
+{\em password} & Password entered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if login is successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a33636513021d1e3a781f9197991dad93}\label{classUser_a33636513021d1e3a781f9197991dad93}} 
+\index{User@{User}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!User@{User}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily bool User\+::register\+User (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Register a new user with hashed password (OOP\+: Behavior using class method). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & SQLite database pointer. \\
+\hline
+{\em username} & The user\textquotesingle{}s name. \\
+\hline
+{\em password} & The user\textquotesingle{}s password (plain text). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if registration is successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_ad27360704a4f942d27a8e7d3719a2a1e}\label{classUser_ad27360704a4f942d27a8e7d3719a2a1e}} 
+\index{User@{User}!userExists@{userExists}}
+\index{userExists@{userExists}!User@{User}}
+\doxysubsubsection{\texorpdfstring{userExists()}{userExists()}}
+{\footnotesize\ttfamily bool User\+::user\+Exists (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Check if user already exists (by username + password). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & SQLite database. \\
+\hline
+{\em username} & Username. \\
+\hline
+{\em password} & Password. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if user exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUser_a597840ebb5fb7432439270ec32ada1ca}\label{classUser_a597840ebb5fb7432439270ec32ada1ca}} 
+\index{User@{User}!ViewRuleFeedback@{ViewRuleFeedback}}
+\index{ViewRuleFeedback@{ViewRuleFeedback}!User@{User}}
+\doxysubsubsection{\texorpdfstring{ViewRuleFeedback()}{ViewRuleFeedback()}}
+{\footnotesize\ttfamily void User\+::\+View\+Rule\+Feedback (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+
+
+Display feedback (if any) for each rule in the system. 
+
+\mbox{\Hypertarget{classUser_ab83bb9e71f633271233b01a2ea442c6e}\label{classUser_ab83bb9e71f633271233b01a2ea442c6e}} 
+\index{User@{User}!viewRules@{viewRules}}
+\index{viewRules@{viewRules}!User@{User}}
+\doxysubsubsection{\texorpdfstring{viewRules()}{viewRules()}}
+{\footnotesize\ttfamily void User\+::view\+Rules (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+
+
+Display all safety rules from the database. 
+
+\mbox{\Hypertarget{classUser_af59fbc784a799ecb3ad97a1deee537ed}\label{classUser_af59fbc784a799ecb3ad97a1deee537ed}} 
+\index{User@{User}!viewTaskDetails@{viewTaskDetails}}
+\index{viewTaskDetails@{viewTaskDetails}!User@{User}}
+\doxysubsubsection{\texorpdfstring{viewTaskDetails()}{viewTaskDetails()}}
+{\footnotesize\ttfamily void User\+::view\+Task\+Details (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{int}]{user\+Id,  }\item[{bool}]{is\+Manager = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+View task details. \mbox{\hyperlink{classManager}{Manager}} sees all, worker sees their own tasks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & SQLite DB. \\
+\hline
+{\em user\+Id} & \mbox{\hyperlink{classUser}{User}}\textquotesingle{}s ID. \\
+\hline
+{\em is\+Manager} & If true, show all tasks. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}\label{classUser_ac2f2e75b15e8eb6cbb030fc85a6cd59f}} 
+\index{User@{User}!password@{password}}
+\index{password@{password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily std\+::string User\+::password\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUser_ac066a219bd8d28680aefb90ecc8fc635}\label{classUser_ac066a219bd8d28680aefb90ecc8fc635}} 
+\index{User@{User}!role@{role}}
+\index{role@{role}!User@{User}}
+\doxysubsubsection{\texorpdfstring{role}{role}}
+{\footnotesize\ttfamily std\+::string User\+::role\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classUser_aacbb807e514280f69e00bec7d71f3aee}\label{classUser_aacbb807e514280f69e00bec7d71f3aee}} 
+\index{User@{User}!username@{username}}
+\index{username@{username}!User@{User}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily std\+::string User\+::username\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+user/\mbox{\hyperlink{user_8h}{user.\+h}}\item 
+user/\mbox{\hyperlink{user_8cpp}{user.\+cpp}}\end{DoxyCompactItemize}

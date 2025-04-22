@@ -1,0 +1,98 @@
+\hypertarget{classDatabaseManager}{}\doxysection{Database\+Manager Class Reference}
+\label{classDatabaseManager}\index{DatabaseManager@{DatabaseManager}}
+
+
+Manages SQLite database operations including table setup and database connection.  
+
+
+
+
+{\ttfamily \#include $<$Database.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDatabaseManager_a5c49ac49cb231f204ab1c6f169444166}{Database\+Manager}} (const std\+::string \&db\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor that opens the SQLite database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDatabaseManager_ae9b3a5da1e04fbb00faf8a034da1d063}{$\sim$\+Database\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that closes the SQLite database. \end{DoxyCompactList}\item 
+sqlite3 $\ast$ \mbox{\hyperlink{classDatabaseManager_a23c68ec481e2a739c12683896397a6cd}{get\+DB}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the SQLite database connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a398662566929911e7c91d0d147ab89b2}{setup\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the required tables in the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages SQLite database operations including table setup and database connection. 
+
+This class handles the initialization, destruction, and management of the SQLite database, as well as setting up necessary tables such as users, tasks, and rules. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDatabaseManager_a5c49ac49cb231f204ab1c6f169444166}\label{classDatabaseManager_a5c49ac49cb231f204ab1c6f169444166}} 
+\index{DatabaseManager@{DatabaseManager}!DatabaseManager@{DatabaseManager}}
+\index{DatabaseManager@{DatabaseManager}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{DatabaseManager()}{DatabaseManager()}}
+{\footnotesize\ttfamily Database\+Manager\+::\+Database\+Manager (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructor that opens the SQLite database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Name} & The name of the SQLite database file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDatabaseManager_ae9b3a5da1e04fbb00faf8a034da1d063}\label{classDatabaseManager_ae9b3a5da1e04fbb00faf8a034da1d063}} 
+\index{DatabaseManager@{DatabaseManager}!````~DatabaseManager@{$\sim$DatabaseManager}}
+\index{````~DatabaseManager@{$\sim$DatabaseManager}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$DatabaseManager()}{~DatabaseManager()}}
+{\footnotesize\ttfamily Database\+Manager\+::$\sim$\+Database\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor that closes the SQLite database. 
+
+Destructor for closing the SQLite database connection.
+
+This function ensures that the database connection is properly closed when the \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} object is destroyed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDatabaseManager_a23c68ec481e2a739c12683896397a6cd}\label{classDatabaseManager_a23c68ec481e2a739c12683896397a6cd}} 
+\index{DatabaseManager@{DatabaseManager}!getDB@{getDB}}
+\index{getDB@{getDB}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{getDB()}{getDB()}}
+{\footnotesize\ttfamily sqlite3 $\ast$ Database\+Manager\+::get\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the SQLite database connection. 
+
+Gets the SQLite database connection.
+
+\begin{DoxyReturn}{Returns}
+sqlite3$\ast$ The SQLite database connection pointer.
+\end{DoxyReturn}
+This function returns the SQLite database connection so that it can be used for querying or other database operations.
+
+\begin{DoxyReturn}{Returns}
+sqlite3$\ast$ Pointer to the SQLite database connection. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDatabaseManager_a398662566929911e7c91d0d147ab89b2}\label{classDatabaseManager_a398662566929911e7c91d0d147ab89b2}} 
+\index{DatabaseManager@{DatabaseManager}!setupTables@{setupTables}}
+\index{setupTables@{setupTables}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{setupTables()}{setupTables()}}
+{\footnotesize\ttfamily void Database\+Manager\+::setup\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets up the required tables in the database. 
+
+This function creates the \textquotesingle{}users\textquotesingle{}, \textquotesingle{}tasks\textquotesingle{}, and \textquotesingle{}rules\textquotesingle{} tables if they do not already exist. It ensures the necessary schema is in place for the application to function properly.
+
+This function creates the \textquotesingle{}users\textquotesingle{}, \textquotesingle{}tasks\textquotesingle{}, and \textquotesingle{}rules\textquotesingle{} tables if they do not already exist. It will be called during initialization to ensure the database schema is set up. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+db/\mbox{\hyperlink{Database_8h}{Database.\+h}}\item 
+db/\mbox{\hyperlink{Database_8cpp}{Database.\+cpp}}\end{DoxyCompactItemize}

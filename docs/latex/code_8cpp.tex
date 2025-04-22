@@ -1,0 +1,62 @@
+\hypertarget{code_8cpp}{}\doxysection{code.\+cpp File Reference}
+\label{code_8cpp}\index{code.cpp@{code.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}db/\+Database.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}manager/manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}worker/worker.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}user/user.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for code.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{code_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{code_8cpp_a383e3c1c13196e92b61c62c5cccef9d3}{handle\+Worker\+Menu}} (sqlite3 $\ast$db, const std\+::string \&username, const std\+::string \&password)
+\item 
+void \mbox{\hyperlink{code_8cpp_a460e1bc18fa03367550e9a1314d484b3}{handle\+Manager\+Menu}} (sqlite3 $\ast$db)
+\item 
+void \mbox{\hyperlink{code_8cpp_aa29d901e2c8f9645d5580f2d5a2b7784}{handle\+Registration}} (sqlite3 $\ast$db, const std\+::string \&username, const std\+::string \&password)
+\item 
+void \mbox{\hyperlink{code_8cpp_a50e4e922c90154922fd4b3aba816783e}{handle\+Login}} (sqlite3 $\ast$db, const std\+::string \&username, const std\+::string \&password)
+\item 
+int \mbox{\hyperlink{code_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{code_8cpp_a50e4e922c90154922fd4b3aba816783e}\label{code_8cpp_a50e4e922c90154922fd4b3aba816783e}} 
+\index{code.cpp@{code.cpp}!handleLogin@{handleLogin}}
+\index{handleLogin@{handleLogin}!code.cpp@{code.cpp}}
+\doxysubsubsection{\texorpdfstring{handleLogin()}{handleLogin()}}
+{\footnotesize\ttfamily void handle\+Login (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{code_8cpp_a460e1bc18fa03367550e9a1314d484b3}\label{code_8cpp_a460e1bc18fa03367550e9a1314d484b3}} 
+\index{code.cpp@{code.cpp}!handleManagerMenu@{handleManagerMenu}}
+\index{handleManagerMenu@{handleManagerMenu}!code.cpp@{code.cpp}}
+\doxysubsubsection{\texorpdfstring{handleManagerMenu()}{handleManagerMenu()}}
+{\footnotesize\ttfamily void handle\+Manager\+Menu (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{code_8cpp_aa29d901e2c8f9645d5580f2d5a2b7784}\label{code_8cpp_aa29d901e2c8f9645d5580f2d5a2b7784}} 
+\index{code.cpp@{code.cpp}!handleRegistration@{handleRegistration}}
+\index{handleRegistration@{handleRegistration}!code.cpp@{code.cpp}}
+\doxysubsubsection{\texorpdfstring{handleRegistration()}{handleRegistration()}}
+{\footnotesize\ttfamily void handle\+Registration (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{code_8cpp_a383e3c1c13196e92b61c62c5cccef9d3}\label{code_8cpp_a383e3c1c13196e92b61c62c5cccef9d3}} 
+\index{code.cpp@{code.cpp}!handleWorkerMenu@{handleWorkerMenu}}
+\index{handleWorkerMenu@{handleWorkerMenu}!code.cpp@{code.cpp}}
+\doxysubsubsection{\texorpdfstring{handleWorkerMenu()}{handleWorkerMenu()}}
+{\footnotesize\ttfamily void handle\+Worker\+Menu (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{code_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{code_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{code.cpp@{code.cpp}!main@{main}}
+\index{main@{main}!code.cpp@{code.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

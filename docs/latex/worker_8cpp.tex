@@ -1,0 +1,53 @@
+\hypertarget{worker_8cpp}{}\doxysection{worker/worker.cpp File Reference}
+\label{worker_8cpp}\index{worker/worker.cpp@{worker/worker.cpp}}
+
+
+Implementation of the \mbox{\hyperlink{classWorker}{Worker}} class in the EHS Management System.  
+
+
+{\ttfamily \#include \char`\"{}worker.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+Include dependency graph for worker.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{worker_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{worker_8cpp_ae9fee94caa49aa4f62d859d6794a732c}{db\+\_\+mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \mbox{\hyperlink{classWorker}{Worker}} class in the EHS Management System. 
+
+This file defines the behavior of the \mbox{\hyperlink{classWorker}{Worker}} class, including task reporting and feedback submission functionalities. Workers can report task progress, submit media files, and provide feedback on safety rules. Multithreading is used for concurrent task reporting, and database access is synchronized using mutexes.
+
+OOP Principles\+:
+\begin{DoxyItemize}
+\item Inheritance\+: \mbox{\hyperlink{classWorker}{Worker}} inherits from \mbox{\hyperlink{classUser}{User}}.
+\item Encapsulation\+: \mbox{\hyperlink{classWorker}{Worker}} functionalities are organized in class methods.
+\end{DoxyItemize}
+
+Multithreading\+:
+\begin{DoxyItemize}
+\item Task reporting is performed using threads to simulate concurrent workers.
+\item Mutex is used to synchronize database operations. 
+\end{DoxyItemize}
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{worker_8cpp_ae9fee94caa49aa4f62d859d6794a732c}\label{worker_8cpp_ae9fee94caa49aa4f62d859d6794a732c}} 
+\index{worker.cpp@{worker.cpp}!db\_mutex@{db\_mutex}}
+\index{db\_mutex@{db\_mutex}!worker.cpp@{worker.cpp}}
+\doxysubsubsection{\texorpdfstring{db\_mutex}{db\_mutex}}
+{\footnotesize\ttfamily std\+::mutex db\+\_\+mutex}
+
+Mutex to ensure safe database access when using threads 

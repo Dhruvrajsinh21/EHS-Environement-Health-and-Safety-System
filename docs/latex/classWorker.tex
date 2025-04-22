@@ -1,0 +1,148 @@
+\hypertarget{classWorker}{}\doxysection{Worker Class Reference}
+\label{classWorker}\index{Worker@{Worker}}
+
+
+Represents a worker in the EHS management system.  
+
+
+
+
+{\ttfamily \#include $<$worker.\+h$>$}
+
+
+
+Inheritance diagram for Worker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classWorker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Worker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classWorker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWorker_a3754817df06ffe220f7f0d903c78ccac}{Worker}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classWorker}{Worker}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWorker_aa8e4543ef1e93fd9d884269ba30c5bfe}{$\sim$\+Worker}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classWorker}{Worker}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWorker_a0addc33d487019f8a35cd3bc43be48f0}{report\+Task\+Work}} (sqlite3 $\ast$db, int user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Allows a worker to report task work. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWorker_a58e1ec184ef0528eea3c88c20a14b7be}{Give\+Rule\+Feedback}} (sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em Allows a worker to give feedback on a rule. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a worker in the EHS management system. 
+
+Inherits from the \mbox{\hyperlink{classUser}{User}} class. A worker can\+:
+\begin{DoxyItemize}
+\item Report task completion with media and description.
+\item Provide feedback on rules. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWorker_a3754817df06ffe220f7f0d903c78ccac}\label{classWorker_a3754817df06ffe220f7f0d903c78ccac}} 
+\index{Worker@{Worker}!Worker@{Worker}}
+\index{Worker@{Worker}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{Worker()}{Worker()}}
+{\footnotesize\ttfamily Worker\+::\+Worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classWorker}{Worker}} object. 
+
+Constructor for the \mbox{\hyperlink{classWorker}{Worker}} class.
+
+Inherits from the \mbox{\hyperlink{classUser}{User}} class to set the role as \char`\"{}worker.\char`\"{} \mbox{\Hypertarget{classWorker_aa8e4543ef1e93fd9d884269ba30c5bfe}\label{classWorker_aa8e4543ef1e93fd9d884269ba30c5bfe}} 
+\index{Worker@{Worker}!````~Worker@{$\sim$Worker}}
+\index{````~Worker@{$\sim$Worker}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{$\sim$Worker()}{~Worker()}}
+{\footnotesize\ttfamily Worker\+::$\sim$\+Worker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the \mbox{\hyperlink{classWorker}{Worker}} object. 
+
+Destructor for the \mbox{\hyperlink{classWorker}{Worker}} class.
+
+Currently does nothing for cleanup. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWorker_a58e1ec184ef0528eea3c88c20a14b7be}\label{classWorker_a58e1ec184ef0528eea3c88c20a14b7be}} 
+\index{Worker@{Worker}!GiveRuleFeedback@{GiveRuleFeedback}}
+\index{GiveRuleFeedback@{GiveRuleFeedback}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{GiveRuleFeedback()}{GiveRuleFeedback()}}
+{\footnotesize\ttfamily void Worker\+::\+Give\+Rule\+Feedback (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+
+
+Allows a worker to give feedback on a rule. 
+
+\mbox{\hyperlink{classWorker}{Worker}} provides feedback on a rule.
+
+Displays a list of all rules and lets the worker submit feedback which is saved in the corresponding rule entry.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection.\\
+\hline
+\end{DoxyParams}
+Workers can select a rule and submit feedback for it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Database connection.\\
+\hline
+\end{DoxyParams}
+OOP Principles\+: The feedback functionality is encapsulated in the {\ttfamily Give\+Rule\+Feedback} method, which ensures that the worker\textquotesingle{}s feedback is handled properly and isolated within the method.
+
+Encapsulation\+: Feedback collection and saving are encapsulated inside the method, providing a clean interface for workers to give feedback on rules. \mbox{\Hypertarget{classWorker_a0addc33d487019f8a35cd3bc43be48f0}\label{classWorker_a0addc33d487019f8a35cd3bc43be48f0}} 
+\index{Worker@{Worker}!reportTaskWork@{reportTaskWork}}
+\index{reportTaskWork@{reportTaskWork}!Worker@{Worker}}
+\doxysubsubsection{\texorpdfstring{reportTaskWork()}{reportTaskWork()}}
+{\footnotesize\ttfamily void Worker\+::report\+Task\+Work (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db,  }\item[{int}]{user\+Id }\end{DoxyParamCaption})}
+
+
+
+Allows a worker to report task work. 
+
+\mbox{\hyperlink{classWorker}{Worker}} reports progress on a task.
+
+Lists assigned tasks, accepts a report description and media path, saves the media, and updates the task in the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection. \\
+\hline
+{\em user\+\_\+id} & ID of the worker reporting the task.\\
+\hline
+\end{DoxyParams}
+This method allows a worker to report their progress on a task. It uses threading to handle multiple task reports concurrently, allowing workers to submit reports simultaneously without waiting for each other.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Database connection. \\
+\hline
+{\em user\+Id} & \mbox{\hyperlink{classWorker}{Worker}} ID.\\
+\hline
+\end{DoxyParams}
+OOP Principles\+: The \mbox{\hyperlink{classWorker}{Worker}} class inherits from \mbox{\hyperlink{classUser}{User}} and uses member functions to encapsulate behavior like reporting tasks and providing feedback.
+
+Threading\+: Threads are used to handle task reporting concurrently so multiple workers can submit reports at the same time.
+
+Encapsulation\+: Task reporting is encapsulated within the report\+Task\+Work function. The database interactions are isolated inside the method, making it easy to manage the worker\textquotesingle{}s task reporting logic separately. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+worker/\mbox{\hyperlink{worker_8h}{worker.\+h}}\item 
+worker/\mbox{\hyperlink{worker_8cpp}{worker.\+cpp}}\end{DoxyCompactItemize}

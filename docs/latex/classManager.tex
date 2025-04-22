@@ -1,0 +1,209 @@
+\hypertarget{classManager}{}\doxysection{Manager Class Reference}
+\label{classManager}\index{Manager@{Manager}}
+
+
+Represents a manager in the EHS management system.  
+
+
+
+
+{\ttfamily \#include $<$manager.\+h$>$}
+
+
+
+Inheritance diagram for Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classManager_a1658ff9f18e38ccd9cb8b0b371b9c20b}{Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classManager}{Manager}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classManager_a322cad25d7007438b3a043ad02253d29}{$\sim$\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classManager}{Manager}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classManager_a192c231c68bcacfa36bab4e3ad4e1c8c}{assign\+Task}} (sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em Assigns a task to a worker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classManager_a119e26e71238d0ac9743ed4b5faa3129}{report\+Violation}} (sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em Reports a safety violation associated with a task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classManager_a2cf2ea0339d0f23cb3c5da234c3b61cd}{add\+Rule}} (sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em Adds a new safety rule to the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classManager_a7da13f957d4df088d31b5596009f32fe}{delete\+Rule}} (sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em Deletes an existing safety rule. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classManager_af1cb8e5d0afb38fa1df7eb83dcc828a5}{delete\+Task}} (sqlite3 $\ast$db)
+\begin{DoxyCompactList}\small\item\em Deletes an existing task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a manager in the EHS management system. 
+
+Inherits from the \mbox{\hyperlink{classUser}{User}} class. A manager can\+:
+\begin{DoxyItemize}
+\item Assign tasks to workers
+\item Report safety violations
+\item Add or delete safety rules
+\item Delete tasks 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classManager_a1658ff9f18e38ccd9cb8b0b371b9c20b}\label{classManager_a1658ff9f18e38ccd9cb8b0b371b9c20b}} 
+\index{Manager@{Manager}!Manager@{Manager}}
+\index{Manager@{Manager}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{Manager()}{Manager()}}
+{\footnotesize\ttfamily Manager\+::\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classManager}{Manager}} object. 
+
+\mbox{\Hypertarget{classManager_a322cad25d7007438b3a043ad02253d29}\label{classManager_a322cad25d7007438b3a043ad02253d29}} 
+\index{Manager@{Manager}!````~Manager@{$\sim$Manager}}
+\index{````~Manager@{$\sim$Manager}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{$\sim$Manager()}{~Manager()}}
+{\footnotesize\ttfamily Manager\+::$\sim$\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the \mbox{\hyperlink{classManager}{Manager}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classManager_a2cf2ea0339d0f23cb3c5da234c3b61cd}\label{classManager_a2cf2ea0339d0f23cb3c5da234c3b61cd}} 
+\index{Manager@{Manager}!addRule@{addRule}}
+\index{addRule@{addRule}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{addRule()}{addRule()}}
+{\footnotesize\ttfamily void Manager\+::add\+Rule (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+
+
+Adds a new safety rule to the system. 
+
+Prompts the manager for rule text and inserts it into the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection.\\
+\hline
+\end{DoxyParams}
+Prompts the manager for a safety rule text and inserts it into the rules table in the database with the current timestamp.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManager_a192c231c68bcacfa36bab4e3ad4e1c8c}\label{classManager_a192c231c68bcacfa36bab4e3ad4e1c8c}} 
+\index{Manager@{Manager}!assignTask@{assignTask}}
+\index{assignTask@{assignTask}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{assignTask()}{assignTask()}}
+{\footnotesize\ttfamily void Manager\+::assign\+Task (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+
+
+Assigns a task to a worker. 
+
+Displays a list of available workers, prompts the manager for task details, and inserts the task into the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManager_a7da13f957d4df088d31b5596009f32fe}\label{classManager_a7da13f957d4df088d31b5596009f32fe}} 
+\index{Manager@{Manager}!deleteRule@{deleteRule}}
+\index{deleteRule@{deleteRule}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{deleteRule()}{deleteRule()}}
+{\footnotesize\ttfamily void Manager\+::delete\+Rule (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+
+
+Deletes an existing safety rule. 
+
+Deletes an existing safety rule from the system.
+
+Displays all rules and allows the manager to delete by rule ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection.\\
+\hline
+\end{DoxyParams}
+Displays all rules and allows the manager to select a rule ID to delete from the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManager_af1cb8e5d0afb38fa1df7eb83dcc828a5}\label{classManager_af1cb8e5d0afb38fa1df7eb83dcc828a5}} 
+\index{Manager@{Manager}!deleteTask@{deleteTask}}
+\index{deleteTask@{deleteTask}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{deleteTask()}{deleteTask()}}
+{\footnotesize\ttfamily void Manager\+::delete\+Task (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+
+
+Deletes an existing task. 
+
+Deletes an existing task from the system.
+
+Displays all tasks and allows the manager to delete by task ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection.\\
+\hline
+\end{DoxyParams}
+Displays all tasks and allows the manager to select a task ID to delete from the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classManager_a119e26e71238d0ac9743ed4b5faa3129}\label{classManager_a119e26e71238d0ac9743ed4b5faa3129}} 
+\index{Manager@{Manager}!reportViolation@{reportViolation}}
+\index{reportViolation@{reportViolation}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{reportViolation()}{reportViolation()}}
+{\footnotesize\ttfamily void Manager\+::report\+Violation (\begin{DoxyParamCaption}\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+
+
+Reports a safety violation associated with a task. 
+
+Reports a violation associated with a task.
+
+Lists assigned tasks, allows selection, and records a violation in the task entry with updated status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection.\\
+\hline
+\end{DoxyParams}
+Lists all pending tasks, allows the manager to select a task, and records the violation details along with the updated task status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Pointer to the SQLite database connection. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+manager/\mbox{\hyperlink{manager_8h}{manager.\+h}}\item 
+manager/\mbox{\hyperlink{manager_8cpp}{manager.\+cpp}}\end{DoxyCompactItemize}
