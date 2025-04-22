@@ -10,7 +10,7 @@ To run the code:
 ./a.out
 ```
 
-For seeing code documentation run the following command:
+For seeing code documentation run the following command (for linux):
 ```bash
 xdg-open /home/irs-training-pc-2/Desktop/Ehssystem/docs/html/index.html
 ```
