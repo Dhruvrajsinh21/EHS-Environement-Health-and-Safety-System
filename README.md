@@ -3,7 +3,7 @@ In this management system, we will be taking care of the EHS rules which are not
 
 The usecase diagram, sequence diagram and other diagrams are linked with the below link:
 
-Document link: https://docs.google.com/document/d/11-_oPlTUlyEZQOBL3GdVBcxj-PUgr8NlpF0bRXdo_0U/edit?usp=sharing
+- Document link: https://docs.google.com/document/d/11-_oPlTUlyEZQOBL3GdVBcxj-PUgr8NlpF0bRXdo_0U/edit?usp=sharing
 
 To run the code:
 
