@@ -6,9 +6,11 @@ The usecase diagram, sequence diagram and other diagrams are linked with the bel
 - Document link: https://docs.google.com/document/d/11-_oPlTUlyEZQOBL3GdVBcxj-PUgr8NlpF0bRXdo_0U/edit?usp=sharing
 
 To run the code:
-
+```bash
 ./a.out
+```
 
-for seeing code documentation run the following command:
-
+For seeing code documentation run the following command:
+```bash
 xdg-open /home/irs-training-pc-2/Desktop/Ehssystem/docs/html/index.html
+```
